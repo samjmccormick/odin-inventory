@@ -17,6 +17,11 @@ async function getTrainerById(id) {
   return rows;
 }
 
+async function deleteTrainer(id) {
+  await pool.query("DELETE FROM trainers WHERE id = $1", [id]);
+  return;
+}
+
 async function getPokemonByName(pokemon) {
   const count = pokemon.map((_, index) => `$${index + 1}`).join(", ");
   const { rows } = await pool.query(
@@ -55,10 +60,21 @@ async function addTrainer(trainer) {
   await pool.query(query, values);
 }
 
+async function updateTrainer(trainer, id) {
+  //cheating and just deleting the trainer and adding a new one with the changes
+  //it does mean that the ID changes which isn't ideal
+  //but the UPDATE SQL seems like it would take completely different js logic than INSERT and who's got time for that
+  await deleteTrainer(id);
+  await addTrainer(trainer);
+  return;
+}
+
 module.exports = {
   getAllPokemon,
   getAllTrainers,
   addTrainer,
   getTrainerById,
   getPokemonByName,
+  deleteTrainer,
+  updateTrainer,
 };

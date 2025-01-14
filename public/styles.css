@@ -1,6 +1,11 @@
+body {
+  width: 100%;
+}
+
 .main {
   left: 150px;
   position: relative;
+  margin: 0 !important;
 }
 
 .sidebar {
@@ -17,4 +22,19 @@
 .trainer-pokeball-icon-row > * {
   padding-left: 0 !important;
   padding-right: 0 !important;
+}
+
+.pokemon {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.row {
+  align-items: center;
 }

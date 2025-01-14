@@ -1,14 +1,23 @@
 <div class="container">
   <div class="row">
-    <h1><%= name %></h1>
+    <h1 class="col"><%= name %></h1>
+    <form id="delete-trainer" method="post" action="/trainers/<%= id%>" class="col">
+      <button type="submit" class="btn btn-danger">Delete Trainer</button>
+      </form>
+      <div class="col">
+        <a href="/trainers/<%= id %>/update" class="btn btn-primary">Edit Trainer</a>
+      </div>
+    </div>
+    <div class="row">
+      <h3 class="col">Age: <%= age %></h3>
+      <h4 class="col">Hometown: <%= hometown %></h4>
+    </div>
+    <div class="container pokemon">
+      <% pokemon.forEach((poke) => { %> <%- include('pokemonCard', {spriteUrl:
+      poke.spriteurl, name: poke.name, type1: poke.type1, id: poke.id, height:
+      poke.height, weight: poke.weight, ability: poke.ability, hp: poke.hp,
+      attack: poke.attack, defense: poke.defense, spattack: poke.spattack,
+      spdefense: poke.spdefense, speed: poke.speed}) %> <% }) %>
+    </div>
   </div>
-  <div class="row">
-    <h3 class="col">Age: <%= age %></h3>
-    <h4 class="col">Hometown: <%= hometown %></h4>
-  </div>
-  <% pokemon.forEach((poke) => { %> <%- include('pokemonCard', {spriteUrl:
-  poke.spriteurl, name: poke.name, type1: poke.type1, id: poke.id, height:
-  poke.height, weight: poke.weight, ability: poke.ability, hp: poke.hp, attack:
-  poke.attack, defense: poke.defense, spattack: poke.spattack, spdefense:
-  poke.spdefense, speed: poke.speed}) %> <% }) %>
 </div>

@@ -14,9 +14,8 @@
   <body>
     <%- include('trainerSideBar/trainerSidebar', {trainers: trainers}) %>
     <div class="container main">
-      <%- include('trainerMain', {name: trainer.name, age: trainer.age,
-      hometown: trainer.hometown, pokemon: pokemon}) %>
-      <a href="/new" class="btn btn-primary">Create New Trainer</a>
+      <%- include('trainerMain', {name: trainer.name, age: trainer.age, id:
+      trainer.id, hometown: trainer.hometown, pokemon: pokemon}) %>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

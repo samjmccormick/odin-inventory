@@ -11,3 +11,4 @@
 11. I guess it probably is slower in the beginning but then faster after that
 12. need to figure out the async handler
 13. should add express-validation to confirm all fields coming from forms
+14. need to deploy

@@ -11,7 +11,7 @@ async function getTrainers(req, res) {
     trainer[0].pokemon5,
     trainer[0].pokemon6,
   ]);
-  console.log(trainer[0]);
+
   res.render("index", {
     trainers: trainers,
     trainer: trainer[0],
@@ -49,9 +49,29 @@ async function getTrainerById(req, res) {
   });
 }
 
+async function trainerUpdateGet(req, res) {
+  const trainers = await db.getAllTrainers();
+  const trainer = await db.getTrainerById(req.params.id);
+  res.render("trainerUpdateForm", { trainer: trainer[0], trainers: trainers });
+}
+
+async function trainerUpdatePost(req, res) {
+  const trainer = req.body;
+  await db.updateTrainer(trainer, req.params.id);
+  res.redirect("/");
+}
+
+async function deleteTrainerById(req, res) {
+  await db.deleteTrainer(req.params.id);
+  res.redirect("/");
+}
+
 module.exports = {
   getTrainers,
   createTrainerGet,
   createTrainerPost,
   getTrainerById,
+  deleteTrainerById,
+  trainerUpdateGet,
+  trainerUpdatePost,
 };
