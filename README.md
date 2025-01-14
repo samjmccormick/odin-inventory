@@ -7,3 +7,6 @@
 7. delete should just be button
 8. ability to delete entire categories?
 9. should probably have a button to repopulate database with initial data (reset)
+10. not sure if it's easiest to initially fully populate pokemon database from api, or to do it piecemiel and only add values when searched and added by user
+11. I guess it probably is slower in the beginning but then faster after that
+12. need to figure out the async handler
