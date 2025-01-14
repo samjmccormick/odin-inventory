@@ -38,11 +38,11 @@ CREATE TABLE IF NOT EXISTS trainers (
   name VARCHAR(100) NOT NULL,
   age INT,
   hometown VARCHAR(100),
-  pokemon1 VARCHAR ( 50 ) REFERENCES pokemon(name) ,
-  pokemon2 VARCHAR ( 50 ) REFERENCES pokemon(name) ,
-  pokemon3 VARCHAR ( 50 ) REFERENCES pokemon(name) ,
-  pokemon4 VARCHAR ( 50 ) REFERENCES pokemon(name) ,
-  pokemon5 VARCHAR ( 50 ) REFERENCES pokemon(name) ,
+  pokemon1 VARCHAR ( 50 ) REFERENCES pokemon(name),
+  pokemon2 VARCHAR ( 50 ) REFERENCES pokemon(name),
+  pokemon3 VARCHAR ( 50 ) REFERENCES pokemon(name),
+  pokemon4 VARCHAR ( 50 ) REFERENCES pokemon(name),
+  pokemon5 VARCHAR ( 50 ) REFERENCES pokemon(name),
   pokemon6 VARCHAR ( 50 ) REFERENCES pokemon(name) 
 );
 `;
