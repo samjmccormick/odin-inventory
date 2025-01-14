@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <h1><%= name %></h1>
+  </div>
+  <div class="row">
+    <h3 class="col">Age: <%= age %></h3>
+    <h4 class="col">Hometown: <%= hometown %></h4>
+  </div>
+  <% pokemon.forEach((poke) => { %> <%- include('pokemonCard', {spriteUrl:
+  poke.spriteurl, name: poke.name, type1: poke.type1, id: poke.id, height:
+  poke.height, weight: poke.weight, ability: poke.ability, hp: poke.hp, attack:
+  poke.attack, defense: poke.defense, spattack: poke.spattack, spdefense:
+  poke.spdefense, speed: poke.speed}) %> <% }) %>
+</div>

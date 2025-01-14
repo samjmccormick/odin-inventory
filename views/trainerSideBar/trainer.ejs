@@ -1,4 +1,11 @@
 <div class="container trainer-sidebar-container">
-  <div><%= name%></div>
-  <div><% pokemon1 ? "*" : null %></div>
+  <a href="/trainers/<%= id%>" class="row"><%= name%></a>
+  <div class="row trainer-pokeball-icon-row">
+    <div class="col"><%= pokemon1 ? '*' : null %></div>
+    <div class="col"><%= pokemon2 ? '*' : null %></div>
+    <div class="col"><%= pokemon3 ? '*' : null %></div>
+    <div class="col"><%= pokemon4 ? '*' : null %></div>
+    <div class="col"><%= pokemon5 ? '*' : null %></div>
+    <div class="col"><%= pokemon6 ? '*' : null %></div>
+  </div>
 </div>
