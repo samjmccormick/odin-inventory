@@ -1,9 +1,11 @@
 <div class="container">
   <div class="row">
     <h1 class="col"><%= name %></h1>
-    <form id="delete-trainer" method="post" action="/trainers/<%= id%>" class="col">
+    <div class="col d-flex flex-row-reverse ">
+    <form id="delete-trainer" method="post" action="/trainers/<%= id%>" class="m-0">
       <button type="submit" class="btn btn-danger">Delete Trainer</button>
       </form>
+    </div>
       <div class="col">
         <a href="/trainers/<%= id %>/update" class="btn btn-primary">Edit Trainer</a>
       </div>

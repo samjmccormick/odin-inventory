@@ -14,7 +14,12 @@
   <body>
     <%- include('trainerSideBar/trainerSidebar', {trainers: trainers}) %>
     <div class="container main">
-      <form id="new-trainer" method="post" action="/new">
+      <form
+        id="new-trainer"
+        method="post"
+        action="/new"
+        class="d-flex flex-column"
+      >
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required />
         <label for="age">Age:</label>
