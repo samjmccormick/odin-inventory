@@ -12,7 +12,7 @@ A full-stack web application that allows users to create, view, update, and dele
 
 ## Tech Stack
 
-- **Frontend**: React, Bootstrap
+- **Frontend**: EJS, CSS, Bootstrap
 - **Backend**: Node.js, Express
 - **Database**: PostgreSQL
 - **API**: PokeAPI
