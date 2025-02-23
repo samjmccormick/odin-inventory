@@ -1,14 +1,18 @@
-1. populate postgreSQL database from rest API
-2. then CRUD data using SQL queries
-3. write it initially on local database before deploying to railway
-4. for views need grid view of all data with ability to filter by categories
-5. need view for individual item
-6. view for adding data (form), updating data (form)
-7. delete should just be button
-8. ability to delete entire categories?
-9. should probably have a button to repopulate database with initial data (reset)
-10. not sure if it's easiest to initially fully populate pokemon database from api, or to do it piecemiel and only add values when searched and added by user
-11. I guess it probably is slower in the beginning but then faster after that
-12. need to figure out the async handler
-13. should add express-validation to confirm all fields coming from forms
-14. need to deploy
+# Pokémon Trainer Management App
+
+A full-stack web application that allows users to create, view, update, and delete Pokémon trainers and manage the Pokémon in their parties. The app fetches Pokémon data from the [PokeAPI](https://pokeapi.co/) and stores it in a PostgreSQL database for efficient data retrieval.
+
+## Features
+
+- **Trainer Management**: Create, update, and delete trainers.
+- **Pokémon Party Management**: Add or remove Pokémon from a trainer’s party.
+- **External API Integration**: Fetch Pokémon data from the PokeAPI and store it in the database.
+- **Relational Database Design**: Trainers and Pokémon are stored in separate tables with structured relationships.
+- **Responsive UI**: Built with React and Bootstrap for an interactive experience.
+
+## Tech Stack
+
+- **Frontend**: React, Bootstrap
+- **Backend**: Node.js, Express
+- **Database**: PostgreSQL
+- **API**: PokeAPI
